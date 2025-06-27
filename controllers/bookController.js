@@ -44,7 +44,10 @@ exports.createBook = (req, res) => {
 
   books.push(newBook);
   saveBooks(books);
-  res.status(201).json(newBook);
+  res.status(201).json({
+    mensagem: 'Livro criado com sucesso!',
+    livro: newBook
+  });
 };
 
 exports.updateBook = (req, res) => {
@@ -54,12 +57,25 @@ exports.updateBook = (req, res) => {
 
   books[index] = { ...books[index], ...req.body };
   saveBooks(books);
-  res.json(books[index]);
+  res.json({
+    mensagem: 'Livro atualizado com sucesso!',
+    livro: books[index]
+  });
 };
-
 exports.deleteBook = (req, res) => {
   const books = loadBooks();
-  const updatedBooks = books.filter(b => b.id !== parseInt(req.params.id));
+  const bookIndex = books.findIndex(b => b.id === parseInt(req.params.id));
+
+  if (bookIndex === -1) {
+    return res.status(404).json({ error: 'Livro não encontrado.' });
+  }
+
+  const deletedBook = books[bookIndex];
+  const updatedBooks = books.filter(b => b.id !== deletedBook.id);
   saveBooks(updatedBooks);
-  res.json({ message: 'Book deleted' });
+
+  res.json({
+    mensagem: 'Livro deletado com sucesso!',
+    livro: deletedBook
+  });
 };
