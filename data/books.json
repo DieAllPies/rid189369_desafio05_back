@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "titulo": "The Hobbit",
+    "num_paginas": 310,
+    "isbn": "978-0-345-33968-3",
+    "editora": "HarperCollins"
+  },
+  {
+    "id": 2,
+    "titulo": "1984 (Edição Especial)",
+    "num_paginas": 328,
+    "isbn": "978-0-452-28423-4",
+    "editora": "Penguin"
+  }
+]
