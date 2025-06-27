@@ -18,10 +18,10 @@ The API is fully integrated with a provided front-end and deployed:
 Desenvolvimento de uma API RESTful utilizando **Node.js** e **Express** para gerenciamento de livros, com todas as operações de CRUD (GET, POST, PUT, DELETE).  
 A API foi totalmente integrada ao front-end fornecido e implantada:
 
-- 🔗 **API hospedada no Render:**  
+-  **API hospedada no Render:**  
   [https://dnc-api-backend.onrender.com/](https://dnc-api-backend.onrender.com/)
 
-- 🔗 **Front-end publicado no Netlify:**  
+-  **Front-end publicado no Netlify:**  
   [https://dnc-desafio05-front.netlify.app/](https://dnc-desafio05-front.netlify.app/)
 
-- 💾 **Arquivo JSON como banco de dados simulado**
+-  **Arquivo JSON como banco de dados simulado**
